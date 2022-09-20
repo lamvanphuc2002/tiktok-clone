@@ -1,0 +1,8 @@
+{
+  "cmpilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  }
+}
