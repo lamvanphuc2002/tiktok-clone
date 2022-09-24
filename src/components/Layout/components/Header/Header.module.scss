@@ -1,50 +1,50 @@
 .wrapper{
- --search-border-radius: 92px;
- --search-height:46px;
- --search-top-spacer:9px;
- --search-button-width:52px;
+  --search-border-radius: 92px;
+  --search-height:46px;
+  --search-top-spacer:9px;
+  --search-button-width:52px;
 
- height: var(--default-layout-header-height);
- box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
- display: flex;
- justify-content: center;
- width: 100%;
+  height: var(--default-layout-header-height);
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .inner{
- height: 100%;
- width: var(--default-layout-width);
- display: flex;
- align-items: center;
- justify-content: space-between;
+  height: 100%;
+  width: var(--default-layout-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
 }
 .search,
 .search-result{
- width: 361px;
+  width: 361px;
 }
 .search{
- position: relative;
- height: var(--search-height,46px);
- padding-left: 16px;
- border-radius: var(--search-border-radius);
- background-color: rgba(22, 24, 35, .06);
- display: flex;
- border: 1.5px solid transparent;
+  position: relative;
+  height: var(--search-height,46px);
+  padding-left: 16px;
+  border-radius: var(--search-border-radius);
+  background-color: rgba(22, 24, 35, .06);
+  display: flex;
+  border: 1.5px solid transparent;
 
- input{
+  input{
   flex: 1;
   height: 100%;
   font-size: 1.6rem;
   color: var(--black);
   caret-color: var(--primary);
   background-color: transparent;
- }
+  }
  // khi mất placeholder thì sự kiện diễn ra
- input:not(:placeholder-shown) ~ .search-btn{
+  input:not(:placeholder-shown) ~ .search-btn{
   color: rgba(22, 24, 35, 0.75);
- }
+  }
 
- &::after{
+  &::after{
   content: "";
   position: absolute;
   top:  var(--search-top-spacer);
@@ -52,40 +52,45 @@
   height: calc(var(--search-height) - var(--search-top-spacer) * 2);
   width: 1px;
   background-color: rgba(22, 24, 35, .12);
-
- }
+  }
  // khi focus vào thẻ bên trong style cho border parent
- &:focus-within{
+  &:focus-within{
   border-color: rgba(22, 24, 35, .2);
- }
+  }
 }
- .result-tittle{
+.result-tittle{
   font-size: 1.4rem;
   font-weight: 600;
   padding: 5px 12px;
   color:  rgba(22, 24, 35, 0.5);
- }
+}
 .clear,
 .loading{
- position: absolute;
- top: 50%;
- transform: translateY(-50%);
- right: calc(var(--search-button-width) + 16px );
- color: rgba(22, 24, 35, 0.34);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(var(--search-button-width) + 16px );
+  color: rgba(22, 24, 35, 0.34);
 }
 .search-btn{
- width: var(--search-button-width);
- height: 100%;
- border-top-right-radius: var(--search-border-radius);
- border-bottom-right-radius: var(--search-border-radius);
- font-size: 1.8rem;
- color: rgba(22, 24, 35, 0.34);
+  width: var(--search-button-width);
+  height: 100%;
+  border-top-right-radius: var(--search-border-radius);
+  border-bottom-right-radius: var(--search-border-radius);
+  font-size: 1.8rem;
+  color: rgba(22, 24, 35, 0.34);
 
- &:hover{
+  &:hover{
   background-color: rgba(22, 24, 35, .03);
   cursor: pointer;
- }
- &:active{
+  }
+  &:active{
   background-color: rgba(22, 24, 35, .06);
- }
+  }
+}
+// custome styles for button
+
+.custom-getapp{
+  color: rgba(22, 24, 35, .75);
+  font-size: 14px;
 }

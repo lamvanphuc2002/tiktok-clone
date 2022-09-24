@@ -8,8 +8,8 @@ import styles from './Header.module.scss';
 import imgages from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
+import Button from '~/components/Button';
 
-console.log(imgages.logo);
 const cx = classNames.bind(styles);
 function Header() {
     const [searchResults, setSearchResults] = useState([]);
@@ -52,7 +52,12 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('actions')}></div>
+                <div className={cx('actions')}>
+                    <Button text>Upload</Button>
+                    <Button primary leftIcon={<FontAwesomeIcon icon={faMagnifyingGlass} />}>
+                        Log in
+                    </Button>
+                </div>
             </div>
         </header>
     );
