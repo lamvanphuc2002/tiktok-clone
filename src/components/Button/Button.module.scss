@@ -7,13 +7,19 @@
   cursor: pointer;
   background-color: var(--white);
   border: 1px solid transparent;
-
+  // display: flex;
+  display: inline-flex;
   + .wrapper{
   margin-left: 16px;
   }
 }
 .icon + .title , .title + .icon {
   margin-left: 8px;
+}
+.icon{
+  display:inline;
+  font-size: 20px;
+  text-align: center;
 }
 
 // Button styles
